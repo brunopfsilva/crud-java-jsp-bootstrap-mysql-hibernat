@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence>
+   <persistence-unit name="grupominer3x" transaction-type="RESOURCE_LOCAL">
+
+      <properties>
+          <provider>org.hibernate.ejb.HibernatePersistence</provider>
+          <class>pool.Pool</class><!-- ir adicionando classes do banco de dados -->
+          <class>coin.Coin</class>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+         <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+         <property name="hibernate.connection.username" value="root"/>
+         <property name="hibernate.connection.password" value="123"/>
+         <property name="hibernate.connection.url" value="jdbc:mysql://localhost/grupominer3x"/>
+         <property name="hibernate.max_fetch_depth" value="3"/>
+         <property name="hibernate.format_sql" value="true" />
+         <property name="hibernate.use_sql_comments" value="false" />
+         <property name="hibernate.hbm2ddl.auto" value="false" /><!-- colocar create quando for recriar o banco de dados -->
+         <property name="hibernate.show_sql" value="false" />
+         <property name="hibernate.jdbc.batch_size" value="50" />
+      </properties>
+   </persistence-unit>
+</persistence>
